@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />  
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>QueroComprar.Store</title>
+	
+</h:head>
+
+<h:body>
+	<h:form id="formPrincipal">
+	
+		<h1>Bem Vindo ao QueroComparar.Store</h1>
+		
+		<p>Essa página está sendo utilizada inicialmente para testes.</p>
+		
+		<h2>Adicionar um parâmetro</h2>
+		
+		<table>
+			<tr>
+				<td>Chave: </td>
+				<td><h:inputText value="#{telaInicialBean.chave}"/></td>
+			</tr>
+			<tr>
+				<td>Valor: </td>
+				<td><h:inputText value="#{telaInicialBean.valor}"/></td>
+			</tr>
+		</table>
+		
+		<h:commandButton action="#{telaInicialBean.addParametro()}" value="Adicionar" update="formPrincipal" />
+		
+		<p:dataTable id="listaParametro" value="#{telaInicialBean.listaParametro}" var="parametro">
+			<p:column headerText="Chave" sortBy="#{parametro.chave}">
+                <h:outputText value="#{parametro.chave}" />
+            </p:column>
+            <p:column headerText="Valor" sortBy="#{parametro.valor}">
+                <h:outputText value="#{parametro.valor}" />
+            </p:column>
+		
+		</p:dataTable>
+	
+	</h:form>
+	
+</h:body>	
+	
+</html>	
