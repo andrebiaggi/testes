@@ -1,19 +1,18 @@
 package br.com.brascov.querocomprar.bean;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.enterprise.context.SessionScoped;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
-import javax.inject.Named;
 
 import br.com.brascov.querocomprar.model.entity.Parametro;
 import br.com.brascov.querocomprar.service.ParametroService;
 
 
+@ManagedBean
 @SessionScoped
-@Named
 public class TelaInicialBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;

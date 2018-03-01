@@ -36,7 +36,7 @@
 		
 		<h:commandButton action="#{telaInicialBean.addParametro()}" value="Adicionar" update="formPrincipal" />
 		
-		<p:dataTable id="listaParametro" value="#{telaInicialBean.listaParametro}" var="parametro">
+		<p:dataTable id="listaParametro" value="#{telaInicialBean.listaParametro}" var="parametro" style="margin-top: 20px;">
 			<p:column headerText="Chave" sortBy="#{parametro.chave}">
                 <h:outputText value="#{parametro.chave}" />
             </p:column>

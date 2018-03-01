@@ -4,11 +4,13 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.enterprise.context.SessionScoped;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 import br.com.brascov.querocomprar.model.entity.Parametro;
 
 
+@ManagedBean
 @SessionScoped
 public class ParametroService implements Serializable {
 
